@@ -11,7 +11,7 @@ It will suggest you in priority the beers that you added into your favourites.
 All the information are provided by OpenBeerData. As the API is currently unavailable, it is based only on the old information (a lot of data are missing). 
 The data are stored in `beers.db` which is handled with Sqlite. Data are divided in six different tables : 
 * **beers** : id, brewery_id, name, cat_id, style_id, abv, ibu, srm, upc, filepath, descript, last_mod
-* **categories** : id, cat_name, last_mod
+* **cat** : id, cat_name, last_mod
 * **styles** : id, cat_id, style_name, last_mod
 * **food_types** : id, type_name, style_id
 * **dishes** : id, dish_name, food_type_id
@@ -21,10 +21,10 @@ All the food suggestions are based on the [Beer & Food pairing guide](https://cd
 
 ### Installation
 
-For now, this app isn't on the Snips App Store yet.
+Create an english Snips assistant, and add the [OpenBeer App](https://console.snips.ai/store/en/skill_E64yVoooQgrb) to it (among every other apps that you need).
 
-In order to be able to run it on your assistant, you have to install Sqlite on your device. 
-(on a raspPi : `sudo apt-get install sqlite`)
+In order to be able to run it on your assistant, you have to install Sqlite on your device 
+(on a raspPi : `sudo apt-get install sqlite`).
 
 Sqlite must have the right to write on `beers.db` and on the directory of the Snips skills (usually located in `/var/lib/snips/skills/OpenBeerApp` on the Pi).
 
@@ -48,8 +48,8 @@ For any troubles with installation or other platforms, please visit the official
 ##### Ask for food suggestion:
 * _"What can I eat with a **Guinness**?"_
 * _"What can I cook with a **Belgian Abbey**?"_
-* _"Tell me what to eat with a **Boulevard Pale Ale**, please."_
-* _"Knowing that I have a **Dulle Teve**, what should I eat?"_
+* _"Tell me what to eat with a **Coffee-Flavored Beer**, please."_
+* _"Knowing that I have a **English-style IPA**, what should I eat?"_
 
 ##### Ask for the listing of your favourite beers:
 * _"Which beers do I have into my favourites ?"_
